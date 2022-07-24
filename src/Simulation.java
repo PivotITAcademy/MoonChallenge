@@ -5,16 +5,13 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Created by ralphemerson on 11/23/2017.
- */
 public class Simulation {
     private ArrayList<Item> items;
     private ArrayList<Rocket> rocketU1;
     private ArrayList<Rocket> rocketU2;
     private boolean hasLanded = true;
-    private File phase1 = new File("phase-1.txt");
-    private File phase2 = new File("phase-2.txt");
+    private File phase1 = new File("C:\\Users\\Owner\\Desktop\\Assignment\\phase-1.txt");
+    private File phase2 = new File("C:\\Users\\Owner\\Desktop\\Assignment\\phase-2.txt");
 
     public Simulation() {
     }

@@ -1,6 +1,4 @@
-/**
- * Created by ralphemerson on 11/23/2017.
- */
+
 public class Rocket implements SpaceShip {
     private int currentWeight;
     private int weight;

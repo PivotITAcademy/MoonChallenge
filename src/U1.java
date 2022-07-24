@@ -1,8 +1,6 @@
 import java.util.Random;
 
-/**
- * Created by ralphemerson on 11/23/2017.
- */
+
 public class U1 extends Rocket {
     private static int rocketU1Counter;
     private final int maxCargo = 8000;

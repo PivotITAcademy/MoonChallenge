@@ -1,9 +1,6 @@
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
-/**
- * Created by ralphemerson on 11/23/2017.
- */
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         final int phase1 = 1;
@@ -21,38 +18,25 @@ public class Main {
 
         System.out.println("LOADING....................");
         phase1Item = simulation.loadItems(phase1);
-        phase2Item = simulation.loadItems(phase2);
 
-        System.out.println("STARTING SIMULATION FOR ROCKET U1...\n");
+        
         System.out.println("=====Simulating Phase 1=====Simulating Phase 1=====Simulating Phase 1=====");
         simulation.runSimulation(simulation.loadU1(phase1Item), 1);
         System.out.println("=====Simulation Done=====Simulation Done=====Simulation Done=====\n");
         phase1Rockets = U1.getRocketU1Counter();
         System.out.println("Rockets used for phase 1: " + phase1Rockets);
 
-        System.out.println("=====Simulating Phase 2=====Simulating Phase 2=====Simulating Phase 2=====");
-        simulation.runSimulation(simulation.loadU1(phase2Item), 1);
-        System.out.println("=====Simulation Done=====Simulation Done=====Simulation Done=====\n");
-        phase2Rockets = U1.getRocketU1Counter() - phase1Rockets;
-        System.out.println("Rockets used for phase 2: " + phase2Rockets + "\n");
-
-        System.out.println("A total of " + U1.getRocketU1Counter() + " rockets was used.");
+        System.out.println("A total of " + U1.getRocketU1Counter() + " U1 rockets was used.");
         u1Cost = totalCost(1);
 
-        System.out.println("STARTING SIMULATION FOR ROCKET U2...\n");
+        
         System.out.println("=====Simulating Phase 1=====Simulating Phase 1=====Simulating Phase 1=====");
         simulation.runSimulation(simulation.loadU2(phase1Item), 2);
         System.out.println("=====Simulation Done=====Simulation Done=====Simulation Done=====\n");
         phase1Rockets = U2.getRocketU2Counter();
         System.out.println("Rockets used for phase 1: " + phase1Rockets);
 
-        System.out.println("=====Simulating Phase 2=====Simulating Phase 2=====Simulating Phase 2=====");
-        simulation.runSimulation(simulation.loadU2(phase2Item), 2);
-        System.out.println("=====Simulation Done=====Simulation Done=====Simulation Done=====\n");
-        phase2Rockets = U2.getRocketU2Counter() - phase1Rockets;
-        System.out.println("Rockets used for phase 2: " + phase2Rockets);
-
-        System.out.println("A total of " + U2.getRocketU2Counter() + " rockets was used." + "\n");
+        System.out.println("A total of " + U2.getRocketU2Counter() + " U2 rockets was used." + "\n");
         u2Cost = totalCost(2);
 
         System.out.println("\nTotal budget needed for U1 rockets is: " + u1Cost);
